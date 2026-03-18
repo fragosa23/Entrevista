@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interview Quick Answers</title>
 
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #facc15;
+  font-size: 32px;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+button {
+  width: 100%;
+  padding: 20px;
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  background: #1f2937;
+  color: white;
+}
+
+button:hover {
+  background: #374151;
+}
+
+.answer {
+  display: none;
+  background: black;
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 10px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.home {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Perguntas da entrevista</h1>
+
+<button onclick="showAnswer(0)">Tell me about yourself</button>
+<div class="answer" id="a0">
+I have over 20 years of experience in the printing and production industry, where I developed a strong understanding of processes and efficiency.
+
+More recently, I’ve been focusing on applying automation and AI to improve business workflows and simplify operations.
+
+I’m also developing my own project, ObaniA, where I test these ideas in real business environments.
+</div>
+
+<button onclick="showAnswer(1)">Concrete example</button>
+<div class="answer" id="a1">
+One example is a workflow I helped organize in a printing company.
+
+I connected the process from customer order to production — including raw material checks, prepress validation like cylinders, and production planning.
+
+Before, this was manual across departments and caused delays.
+
+With a simple algorithm and app, we improved efficiency and reduced workload.
+</div>
+
+<button onclick="showAnswer(2)">How do you use AI?</button>
+<div class="answer" id="a2">
+I use AI mainly to improve workflows and automate repetitive processes.
+
+My focus is not just the technology, but how it improves real business operations.
+</div>
+
+<button onclick="showAnswer(3)">Challenges in businesses</button>
+<div class="answer" id="a3">
+The biggest challenge is changing mindsets.
+
+Processes may work, but they are not always efficient.
+
+I show simple solutions with real results to help businesses adopt better workflows.
+</div>
+
+<button onclick="showAnswer(4)">What are you looking for?</button>
+<div class="answer" id="a4">
+I’m looking for opportunities where I can improve business processes using AI and automation in a practical way.
+</div>
+
+<button onclick="showAnswer(5)">Technical level</button>
+<div class="answer" id="a5">
+I’m still developing my technical depth, but I’m very hands-on and focused on practical implementation.
+</div>
+
+<button onclick="showAnswer(6)">Studies</button>
+<div class="answer" id="a6">
+I’m currently pursuing a Higher Technical Course in Multimedia Applications, with the goal of progressing to a Bachelor’s degree.
+</div>
+
+<button onclick="showAnswer(7)">End of call</button>
+<div class="answer" id="a7">
+Thank you, I really enjoyed the conversation.
+
+I’d be happy to explore how I can contribute.
+
+What would be the next step?
+</div>
+
+</div>
+
+<button class="home" onclick="goHome()">HOME</button>
+
+<script>
+function showAnswer(index) {
+  document.querySelectorAll('.answer').forEach(a => a.style.display = 'none');
+  document.getElementById('a' + index).style.display = 'block';
+}
+
+function goHome() {
+  document.querySelectorAll('.answer').forEach(a => a.style.display = 'none');
+  window.scrollTo(0, 0);
+}
+</script>
+
+</body>
+</html>
